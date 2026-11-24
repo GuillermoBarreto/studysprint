@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "studysprint"
+version = "0.1.0"
+description = "A CLI study planner for self-paced degree courses: turn a course list and deadlines into a daily study plan."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Guillermo Barreto" }]
+
+[project.scripts]
+studysprint = "studysprint.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["studysprint*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
